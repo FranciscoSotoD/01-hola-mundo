@@ -1,0 +1,35 @@
+<div class="row">
+
+  <div class="col">
+    <h1>*ngIf</h1>
+    <hr>
+
+    <div *ngIf="mostrarOcultarAutor" class="card text-white bg-primary mb-3" style="max-width: 100%;">
+      <div class="card-body">
+        <h5 class="card-title">Autor: {{ frase.autor }}</h5>
+        <p class="card-text">Mensaje: {{ frase.mensaje }}</p>
+      </div>
+    </div>
+
+    <button (click)="mostrarOcultarAutor = !mostrarOcultarAutor" class="btn btn-outline-primary btn-block">
+      Mostrar/Ocultar autor con su mensaje
+    </button>
+
+  </div>
+
+  <div class="col">
+    <h1>*ngFor</h1>
+    <hr>
+
+    <ul *ngIf="mostrarOcultarArreglo" class="list-group">
+      <li *ngFor="let personaje of personajesArr; let i = index" class="list-group-item"> 
+        {{ i + 1}} .- {{ personaje }} </li>
+    </ul>
+
+    <button (click)="mostrarOcultarArreglo = !mostrarOcultarArreglo" class="btn btn-outline-success btn-block mt-3">
+        Mostrar/Ocultar personajes de dragón ball
+    </button>
+
+  </div>
+</div>
+
